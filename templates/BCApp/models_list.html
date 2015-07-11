@@ -1,0 +1,17 @@
+{% extends "BCApp/main.html"%}
+
+{% block content %}
+    <ul>
+    {% for model in models %}
+        <li>{{ model.name }}
+                <ul>
+               {% for bu in model.businessunits.all %}
+                   <li>
+                   {{ bu.name }}
+                   </li>
+               {% endfor %}
+                </ul>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
