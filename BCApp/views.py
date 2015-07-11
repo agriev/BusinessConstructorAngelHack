@@ -5,7 +5,11 @@ from BCApp.models import BCBusinessUnit,BCBusinessModel,BCUser
 
 def home(request):
     context = { "name" : "name"}
-    return render(request, "BCApp/home.html", context)
+    return render(request, "BCApp/index.html", context)
+
+def sign_in(request):
+    context = { "name" : "name"}
+    return render(request, "BCApp/signin.html", context)
 
 def model_list(request):
     models = BCBusinessModel.objects.all()
