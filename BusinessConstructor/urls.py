@@ -8,6 +8,5 @@ urlpatterns = patterns('',
     url(r'^signin$', 'BCApp.views.sign_in', name='sign_in'),
     #url(r'^index$', 'BCApp.views.index', name='index'),
     # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
 )
