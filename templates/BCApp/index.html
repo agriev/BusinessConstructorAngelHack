@@ -248,7 +248,7 @@
 							<ul class="list-unstyled">
 								<li class="divider"></li>
 								<li>
-									<a role="menuitem" tabindex="-1" href="user-profile.html"><i class="fa fa-user"></i> Мой профиль</a>
+									<a role="menuitem" tabindex="-1" href="trash/user-profile.html"><i class="fa fa-user"></i> Мой профиль</a>
 								</li>
 								<li>
 									<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Сменить главный проект</a>
@@ -288,7 +288,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="mailbox-folder.html">
+										<a href="trash/mailbox-folder.html">
 											<span class="pull-right label label-primary">182</span>
 											<i class="fa fa-envelope" aria-hidden="true"></i>
 											<span>Почта</span>
@@ -329,27 +329,27 @@
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="ui-elements-typography.html">
+												<a href="trash/ui-elements-typography.html">
 													 Ларёк с цветами
 												</a>
 											</li>
 											<li>
-												<a href="ui-elements-icons.html">
+												<a href="trash/ui-elements-icons.html">
 													 Новостной портал
 												</a>
 											</li>
 											<li>
-												<a href="ui-elements-tabs.html">
+												<a href="trash/ui-elements-tabs.html">
 													 Продажа природного камня
 												</a>
 											</li>
 											<li>
-												<a href="ui-elements-panels.html">
+												<a href="trash/ui-elements-panels.html">
 													 Пластиковые окна
 												</a>
 											</li>
 											<li>
-												<a href="ui-elements-widgets.html">
+												<a href="trash/ui-elements-widgets.html">
 													 Новый проект
 												</a>
 											</li>
@@ -362,22 +362,22 @@
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="forms-basic.html">
+												<a href="trash/forms-basic.html">
 													 Управление персоналом
 												</a>
 											</li>
 											<li>
-												<a href="forms-advanced.html">
+												<a href="trash/forms-advanced.html">
 													 Задачи по персовналу
 												</a>
 											</li>
 											<li>
-												<a href="forms-validation.html">
+												<a href="trash/forms-validation.html">
 													 Зарплаты
 												</a>
 											</li>
 											<li>
-												<a href="forms-layouts.html">
+												<a href="trash/forms-layouts.html">
 													 Мероприятия
 												</a>
 											</li>
@@ -390,17 +390,17 @@
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="tables-basic.html">
+												<a href="trash/tables-basic.html">
 													 Счета
 												</a>
 											</li>
 											<li>
-												<a href="tables-advanced.html">
+												<a href="trash/tables-advanced.html">
 													 Отчёты
 												</a>
 											</li>
 											<li>
-												<a href="tables-responsive.html">
+												<a href="trash/tables-responsive.html">
 													 Баланс
 												</a>
 											</li>
@@ -413,17 +413,17 @@
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="maps-google-maps.html">
+												<a href="trash/maps-google-maps.html">
 													 Состояние сайта
 												</a>
 											</li>
 											<li>
-												<a href="maps-google-maps-builder.html">
+												<a href="trash/maps-google-maps-builder.html">
 													 Анализ рекламных компаний
 												</a>
 											</li>
 											<li>
-												<a href="maps-vector.html">
+												<a href="trash/maps-vector.html">
 													 Материалы
 												</a>
 											</li>
@@ -436,22 +436,22 @@
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="layouts-default.html">
+												<a href="trash/layouts-default.html">
 													 Данные фирмы
 												</a>
 											</li>
 											<li>
-												<a href="layouts-boxed.html">
+												<a href="trash/layouts-boxed.html">
 													 Локация
 												</a>
 											</li>
 											<li>
-												<a href="layouts-menu-collapsed.html">
+												<a href="trash/layouts-menu-collapsed.html">
 													 Налогооблажение
 												</a>
 											</li>
 											<li>
-												<a href="layouts-scroll.html">
+												<a href="trash/layouts-scroll.html">
 													 Процентные доли
 												</a>
 											</li>
@@ -575,16 +575,20 @@
 											<div class="tab-content">
 												<div id="w4-account" class="tab-pane active">
 													<div class="form-group has-error">
-														<label class="col-sm-3 control-label" for="w4-username">Username</label>
+														<label class="col-sm-3 control-label" for="w4-username">Выберите шаблон</label>
 														<div class="col-sm-9">
-															<input type="text" class="form-control" name="username" id="w4-username" required="">
-														<label for="w4-username" class="error">This field is required.</label></div>
+															<select class="form-control mb-md">
+                                                                {% for model in models %}
+                                                                    <option>{{ model.name }}</option>
+                                                                {% endfor %}
+                                                            </select>
+														<label for="w4-username" class="error">Необходимо заполнить.</label></div>
 													</div>
 													<div class="form-group has-error">
-														<label class="col-sm-3 control-label" for="w4-password">Password</label>
+														<label class="col-sm-3 control-label" for="w4-password">Локация бизнеса</label>
 														<div class="col-sm-9">
 															<input type="password" class="form-control" name="password" id="w4-password" required="" minlength="6">
-														<label for="w4-password" class="error">This field is required.</label></div>
+														<label for="w4-password" class="error">Необходимо заполнить.</label></div>
 													</div>
 												</div>
 												<div id="w4-profile" class="tab-pane">
@@ -664,13 +668,13 @@
 									<div class="panel-footer" style="display: block;">
 										<ul class="pager">
 											<li class="previous disabled">
-												<a><i class="fa fa-angle-left"></i> Previous</a>
+												<a><i class="fa fa-angle-left"></i> Назад</a>
 											</li>
 											<li class="finish hidden pull-right">
 												<a>Finish</a>
 											</li>
 											<li class="next">
-												<a>Next <i class="fa fa-angle-right"></i></a>
+												<a>Далее <i class="fa fa-angle-right"></i></a>
 											</li>
 										</ul>
 									</div>
@@ -776,8 +780,14 @@
 		<!-- Theme Initialization Files -->
 		<script src="/static/javascripts/theme.init.js"></script>
 
+		<!-- Specific Page Vendor -->
+		<script src="/static/vendor/jquery-validation/jquery.validate.js"></script>
+		<script src="/static/vendor/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+		<script src="/static/vendor/pnotify/pnotify.custom.js"></script>
+        <script src="assets/vendor/jquery-autosize/jquery.autosize.js"></script>
+		<script src="assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
 
 		<!-- Examples -->
-		<script src="/static/javascripts/dashboard/examples.dashboard.js"></script>
+		<script src="/static/javascripts/forms/examples.wizard.js"></script>
 	</body>
 </html>
