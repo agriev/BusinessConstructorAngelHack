@@ -19,3 +19,13 @@ def model_list(request):
     models = BCBusinessModel.objects.all()
     context = { "models" : models}
     return render(request, "BCApp/models_list.html", context)
+
+@csrf_exempt
+def sign_up(request):
+    context = { "name" : "name"}
+    return render(request, "BCApp/signup.html", context)
+
+@csrf_exempt
+def recover_password(request):
+    context = { "name" : "name"}
+    return render(request, "BCApp/recover-password.html", context)
