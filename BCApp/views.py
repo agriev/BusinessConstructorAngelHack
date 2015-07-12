@@ -29,3 +29,8 @@ def sign_up(request):
 def recover_password(request):
     context = { "name" : "name"}
     return render(request, "BCApp/recover-password.html", context)
+
+@csrf_exempt
+def user_profile(request):
+    context = { "name" : "name"}
+    return render(request, "BCApp/user-profile.html", context)
